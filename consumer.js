@@ -8,6 +8,9 @@ async function connect() {
         channel.consume("jobs",message=>{
             const input = JSON.parse(message.content.toString());
             console.log(`Received job with ${input.number}`);
+            if (input.number == 9) {
+                channel.ack(message);
+            }
         })
         console.log("Waiting for messages");
     } catch (e)
