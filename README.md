@@ -2,7 +2,8 @@
 
 docker run --name rabbitmq -p 5672:5672 rabbitmq
 
-Run consumer and publisher in 2 terminals
+npm run publish
+npm run consume
 
 https://www.youtube.com/watch?v=Cie5v59mrTg&t=1566s
 
