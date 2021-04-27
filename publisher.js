@@ -1,7 +1,7 @@
 //advanced message q protocol
 const amqp = require('amqplib');
-
-const message = {number: 9}
+// get user input
+const message = {number: process.argv[2]}
 async function connect() {
     try {
         const connection = await amqp.connect("amqp://localhost:5672");
